@@ -8,6 +8,10 @@ Selecting a different keyboard layout instead of the default international US in
 
 - Select from the **HOST KEYBOARD LAYOUT** drop-down list your preferred language layout.
 
+ <p align="center"> 
+    <img src="https://github.com/MagoSaronno/keyther/blob/main/docs/images/changing_layout.png" width="700" />
+</p>
+
 Now the *reference keyboard* on the very bottom of the page should show the keyboard layout of your language of choice.  You can now customise your Keyther keyboard layout and add layers to it.
 
-To download the firmware you should first compile the keymap and then download it using the designated button.
+To download the firmware you should first ***compile*** the keymap and then ***download*** it using the designated buttons.  From this point onwards, continue to follow the [guide](https://docs.qmk.fm/configurator_step_by_step "Continue here") on the QMK website.
