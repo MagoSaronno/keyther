@@ -7,17 +7,17 @@ The Keyther Keyboard represents an attempt at perfecting the already great [Cant
 
 ### What changes from Cantor
 
-1. The often *criticised* and *feared* TRRS socket is replaced with the more secure RJ45 (Ethernet) to ultimately avoid *critical* integrity issues caused by accidental disconnection or hot-plugging.  Indeed, the Keyther Keyboard supports hot-plugging, as shown in this video:
+1. The TRRS socket is replaced with the more secure RJ45 (Ethernet) to avoid *critical* integrity issues caused by accidental disconnection or hot-plugging.  Indeed, the Keyther Keyboard supports hot-plugging, as shown in this video:
  <p align="center"> 
    <a href="https://youtu.be/JiO30BsTjEQ">
-    <img src="https://img.youtube.com/vi/JiO30BsTjEQ/0.jpg" alt="Watch the video" />
+    <img src="https://img.youtube.com/vi/JiO30BsTjEQ/0.jpg" alt="Watch the video" width="700"/>
   </a>
 </p>
 
-2. The design introduces **hot-swappable** Kailh Choc **sockets**, in a certain sense partially *contravening* to the original Cantor's purpose of being the least annoying keyboard to assemble. 
-Nonetheless, once the initial assembly is finished, you won't have to desolder all 42 switches to change them, representing a good time investment for possible further changes to the keyboard components.
+2. The design introduces **hot-swappable** Kailh Choc **sockets** and **handedness by pin** (through the addition of a 10k resistor and an added line in the config.h file)
+You won't have to desolder all 42 switches to change them and you will be able to connect the keyboard even through the right half.
 
-3. Furthermore, the design slightly *increases* switches' horizontal spacing, accommodating larger hands **without** additional modifications to the overall PCB size
+3. The horizontal space between switches has been *increased*, accommodating larger hands **without** additional modifications to the overall PCB size (expept the space for the RJ45 socket).
 
 ### What does not change
 
@@ -75,6 +75,10 @@ The Keyther Keyboard uses the [QMK Firmware](https://qmk.fm/), specifically the 
 
 To add **language-specific characters** (such as *accented* or *umlaut* vowels) you can follow this [additional guide](Language-Specific_Keymap.md).
 
+Unfortunately, at this time, to add the handedness feature to your keyboard you will need to use the [QMK source](https://docs.qmk.fm/newbs "The guide to use the source"), and, before compiling, add to the cantor's config.h file the line:
+
+`#define SPLIT_HAND_PIN B7`
+
 ### Enter Bootloader Mode
 To flash the firmware onto the microcontroller you will need to set it in bootloader mode first:
 - Press and hold the BOOT0 button.
@@ -83,10 +87,16 @@ To flash the firmware onto the microcontroller you will need to set it in bootlo
 
 Now you will be able to flash the firmware and check if the microcontroller works properly.
 
-Once the first flash has been done successfully you will be able to enter bootloader mode just by plugging in one half of the keyboard **while** holding down the top-left or top-right (*whether it is the left or right keyboard half*).
+> Once the first flash has been done successfully you will be able to enter bootloader mode just by plugging in one half of the keyboard **while** holding down the top-left or top-right (*whether it is the left or right keyboard half*).
 
 ### Assemble the keyboard
 To assemble your Keyther Keyboard you will need a soldering iron and tin of your choice. You can also follow the [Assembly Guide](docs/Assembling_Guide.md).
+
+### Printing the Keyther cases
+To 3D print the cases to protect the bottom of your keyboard halves you will need to download the *.stl* files present in the [case folder](https://github.com/MagoSaronno/keyther/tree/main/case) of this repository and slice them with the appropriate software.
+
+In case you wish to modify the designs, you can download the *.step* files in the [step folder](https://github.com/MagoSaronno/keyther/tree/main/case/step).
+I've personally succeded in printing them using generic PLA with a layer height of 0.2mm and no supports.
 
 ## Feedback
 You can fill out [this form](https://forms.gle/tCP48DNiQqiqbWwy6 "Leave here your much appreciated feedback") to let me know of any potential improvements or issues with the project. 
