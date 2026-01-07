@@ -44,9 +44,12 @@
     <img src="https://github.com/MagoSaronno/keyther/blob/main/docs/images/RJ45_position.jpg" width="700"/>
 </p>
 
+6- Solder a 10k resistor in the holes only on the right half of the keyboard to allow automatic handedness (it will enable you to connect the keyboard from the right half instead than only from the left one).
+
 6- Insert the switches in their sockets and add the keycaps.
 
 7- Enjoy your Keyther!
+
 
 
 
