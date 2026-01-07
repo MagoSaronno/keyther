@@ -77,7 +77,7 @@ To add **language-specific characters** (such as *accented* or *umlaut* vowels) 
 
 Unfortunately, at this time, to add the handedness feature to your keyboard you will need to use the [QMK source](https://docs.qmk.fm/newbs "The guide to use the source"), and, before compiling, add to the cantor's config.h file the line:
 
-`#define SPLIT_HAND_PIN B7`
+`#define SPLIT_HAND_PIN B12`
 
 ### Enter Bootloader Mode
 To flash the firmware onto the microcontroller you will need to set it in bootloader mode first:
